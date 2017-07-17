@@ -1,0 +1,27 @@
+{
+  "References": [
+    {
+      "Name": "STM32F4xx_HAL_Driver"
+    }
+  ],
+  "ExcludedFiles": [
+    "Class",
+    "Core/Src/usbd_conf_template.c"
+  ],
+  "Type": "StaticLibrary",
+  "Includes": [
+    {
+      "Value": "Core/Inc",
+      "Exported": true,
+      "Global": false
+    }
+  ],
+  "StaticLibraries": [],
+  "ToolchainSettings": {},
+  "DebugSettings": {},
+  "Settings": {
+    "AvalonStudio.Projects.CPlusPlus.CodeAnalysisSettings": {
+      "Enabled": false
+    }
+  }
+}

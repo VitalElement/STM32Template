@@ -1,0 +1,42 @@
+{
+  "References": [
+    {
+      "Name": "CMSIS"
+    }
+  ],
+  "ExcludedFiles": [
+    "Release_Notes.html",
+    "STM32F410Rx_User_Manual.chm",
+    "STM32F411xE_User_Manual.chm",
+    "STM32F417xx_User_Manual.chm",
+    "STM32F439xx_User_Manual.chm",
+    "STM32F446xx_User_Manual.chm",
+    "STM32F479xx_User_Manual.chm",
+    "Src/stm32f4xx_hal_msp_template.c",
+    "Src/stm32f4xx_hal_timebase_tim_template.c",
+    "Src/stm32f4xx_hal_timebase_rtc_wakeup_template.c",
+    "Src/stm32f4xx_hal_timebase_rtc_alarm_template.c"
+  ],
+  "Type": "StaticLibrary",
+  "Includes": [
+    {
+      "Value": "Inc",
+      "Exported": true,
+      "Global": false
+    },
+    {
+      "Value": "Inc/Legacy",
+      "Exported": true,
+      "Global": false
+    }
+  ],
+  "StaticLibraries": [],
+  "ToolchainSettings": {},
+  "DebugSettings": {},
+  "Settings": {
+    "AvalonStudio.Projects.CPlusPlus.CodeAnalysisSettings": {
+      "Enabled": false
+    },
+    "AvalonStudio.Projects.CPlusPlus.BuildEventsSettings": {}
+  }
+}

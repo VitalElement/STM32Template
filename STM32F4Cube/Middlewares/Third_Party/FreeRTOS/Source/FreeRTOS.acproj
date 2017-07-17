@@ -1,0 +1,26 @@
+{
+  "References": [
+    {
+      "Name": "CMSIS"
+    }
+  ],
+  "ExcludedFiles": [
+    "portable"
+  ],
+  "Type": "StaticLibrary",
+  "Includes": [
+    {
+      "Value": "include",
+      "Exported": true,
+      "Global": false
+    }
+  ],
+  "StaticLibraries": [],
+  "ToolchainSettings": {},
+  "DebugSettings": {},
+  "Settings": {
+    "AvalonStudio.Projects.CPlusPlus.CodeAnalysisSettings": {
+      "Enabled": false
+    }
+  }
+}

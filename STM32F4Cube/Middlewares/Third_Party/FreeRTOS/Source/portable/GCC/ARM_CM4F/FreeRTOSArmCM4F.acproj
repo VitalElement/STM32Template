@@ -1,0 +1,24 @@
+{
+  "References": [
+    {
+      "Name": "FreeRTOS"
+    }
+  ],
+  "ExcludedFiles": [],
+  "Type": "StaticLibrary",
+  "Includes": [
+    {
+      "Value": "../ARM_CM4F",
+      "Exported": false,
+      "Global": true
+    }
+  ],
+  "StaticLibraries": [],
+  "ToolchainSettings": {},
+  "DebugSettings": {},
+  "Settings": {
+    "AvalonStudio.Projects.CPlusPlus.CodeAnalysisSettings": {
+      "Enabled": false
+    }
+  }
+}

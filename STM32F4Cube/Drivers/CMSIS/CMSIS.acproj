@@ -1,0 +1,32 @@
+{
+  "References": [],
+  "ExcludedFiles": [
+    "index.html",
+    "CMSIS_END_USER_LICENCE_AGREEMENT.rtf",
+    "CMSIS_END_USER_LICENCE_AGREEMENT.pdf",
+    "Documentation",
+    "DSP_Lib",
+    "Device/ST/STM32F4xx/Source/Templates"
+  ],
+  "Type": "StaticLibrary",
+  "Includes": [
+    {
+      "Value": "Device/ST/STM32F4xx/Include",
+      "Exported": true,
+      "Global": false
+    },
+    {
+      "Value": "Include",
+      "Exported": true,
+      "Global": false
+    }
+  ],
+  "StaticLibraries": [],
+  "ToolchainSettings": {},
+  "DebugSettings": {},
+  "Settings": {
+    "AvalonStudio.Projects.CPlusPlus.CodeAnalysisSettings": {
+      "Enabled": false
+    }
+  }
+}
