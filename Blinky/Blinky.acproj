@@ -19,6 +19,11 @@
       "Value": "HalConfig",
       "Exported": true,
       "Global": true
+    },
+    {
+      "Value": "../Blinky",
+      "Exported": true,
+      "Global": true
     }
   ],
   "Defines": [
@@ -38,18 +43,13 @@
       "Global": true
     },
     {
-      "Value": "VECT_TAB_OFFSET=0x0",
-      "Exported": false,
-      "Global": true
-    },
-    {
       "Value": "STM32F407xx",
       "Exported": false,
       "Global": true
     }
   ],
   "StaticLibraries": [],
-  "Executable": "build/bin/GBSD.DiscoveryBoard.elf",
+  "Executable": "build/bin/Blinky.elf",
   "ToolchainSettings": {
     "AvalonStudio.Toolchains.GCC.GccToolchainSettings": {
       "CompileSettings": {
@@ -61,7 +61,7 @@
         "CustomFlags": "-target arm-none-eabi -mcpu=cortex-m4 -mthumb -Wno-parentheses-equality -Wno-ignored-attributes -Wno-deprecated-register -Wno-unknown-pragmas -Wno-implicit-exception-spec-mismatch -Wno-varargs",
         "CLanguageStandard": "Default",
         "CppLanguageStandard": "Cpp14",
-        "Optimization": "Speed",
+        "Optimization": "None",
         "Fpu": "Hard"
       },
       "LinkSettings": {
@@ -114,7 +114,7 @@
   "Settings": {
     "AvalonStudio.Projects.CPlusPlus.BuildEventsSettings": {
       "PreBuildCommands": "",
-      "PostBuildCommands": "$(DevEnvDir)/arm-none-eabi-objcopy -O binary $(TargetPath) $(TargetDir)$(TargetName).bin\r\ndotnet Tools/BinEncrypt.dll BE7E2A1  $(TargetDir)$(TargetName).bin $(TargetDir)$(TargetName).firmware"
+      "PostBuildCommands": "$(DevEnvDir)/arm-none-eabi-objcopy -O binary $(TargetPath) $(TargetDir)$(TargetName).bin"
     }
   }
 }

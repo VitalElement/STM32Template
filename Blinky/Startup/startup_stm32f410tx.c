@@ -9,7 +9,6 @@
 
 
 #pragma mark Includes
-#include "FreeRTOSConfig.h"
 #include <stddef.h>
 #include <stdint.h>
 
@@ -32,7 +31,7 @@
 /*----------Stack Configuration-----------------------------------------------*/
 #define STACK_SIZE 0x00000800 /*!< The Stack size suggest using even number    */
 __attribute__ ((section (".noinit"))) static unsigned long stack[STACK_SIZE];
-__attribute__ ((section (".noinit"))) uint8_t ucHeap[configTOTAL_HEAP_SIZE];
+//__attribute__ ((section (".noinit"))) uint8_t ucHeap[configTOTAL_HEAP_SIZE];
 
 
 /*----------Macro definition--------------------------------------------------*/

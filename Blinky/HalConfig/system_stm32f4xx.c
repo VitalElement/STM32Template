@@ -2,20 +2,20 @@
   ******************************************************************************
   * @file    system_stm32f4xx.c
   * @author  MCD Application Team
-  * @version V2.6.0
-  * @date    04-November-2016
+  * @version V2.6.1
+  * @date    14-February-2017
   * @brief   CMSIS Cortex-M4 Device Peripheral Access Layer System Source File.
   *
-  *   This file provides two functions and one global variable to be called from
+  *   This file provides two functions and one global variable to be called from 
   *   user application:
-  *      - SystemInit(): This function is called at startup just after reset and
+  *      - SystemInit(): This function is called at startup just after reset and 
   *                      before branch to main program. This call is made inside
   *                      the "startup_stm32f4xx.s" file.
   *
   *      - SystemCoreClock variable: Contains the core clock (HCLK), it can be used
-  *                                  by the user application to setup the SysTick
+  *                                  by the user application to setup the SysTick 
   *                                  timer or configure other parameters.
-  *
+  *                                     
   *      - SystemCoreClockUpdate(): Updates the variable SystemCoreClock and must
   *                                 be called whenever the core clock is changed
   *                                 during program execution.
@@ -24,7 +24,7 @@
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; COPYRIGHT 2016 STMicroelectronics</center></h2>
+  * <h2><center>&copy; COPYRIGHT 2017 STMicroelectronics</center></h2>
   *
   * Redistribution and use in source and binary forms, with or without modification,
   * are permitted provided that the following conditions are met:
@@ -57,12 +57,12 @@
 
 /** @addtogroup stm32f4xx_system
   * @{
-  */
-
+  */  
+  
 /** @addtogroup STM32F4xx_System_Private_Includes
   * @{
   */
-// clang-format off
+
 
 #include "stm32f4xx.h"
 
@@ -108,10 +108,8 @@
 /*!< Uncomment the following line if you need to relocate your vector Table in
      Internal SRAM. */
 /* #define VECT_TAB_SRAM */
-#ifndef VECT_TAB_OFFSET
 #define VECT_TAB_OFFSET  0x00 /*!< Vector Table base offset field. 
                                    This value must be a multiple of 0x200. */
-#endif
 /******************************************************************************/
 
 /**
