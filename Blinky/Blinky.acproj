@@ -1,0 +1,120 @@
+{
+  "References": [
+    {
+      "Name": "ArmSystem"
+    },
+    {
+      "Name": "CMSIS"
+    },
+    {
+      "Name": "STM32F4xx_HAL_Driver"
+    }
+  ],
+  "Toolchain": "AvalonStudio.Toolchains.Clang.ClangToolchain",
+  "Debugger2": "AvalonStudio.Debugging.GDB.JLink.JLinkDebugger",
+  "ExcludedFiles": [],
+  "Type": "Executable",
+  "Includes": [
+    {
+      "Value": "HalConfig",
+      "Exported": true,
+      "Global": true
+    }
+  ],
+  "Defines": [
+    {
+      "Value": "USE_HAL_DRIVER",
+      "Exported": false,
+      "Global": true
+    },
+    {
+      "Value": "DEBUG",
+      "Exported": false,
+      "Global": true
+    },
+    {
+      "Value": "HSE_VALUE=8000000",
+      "Exported": false,
+      "Global": true
+    },
+    {
+      "Value": "VECT_TAB_OFFSET=0x0",
+      "Exported": false,
+      "Global": true
+    },
+    {
+      "Value": "STM32F407xx",
+      "Exported": false,
+      "Global": true
+    }
+  ],
+  "StaticLibraries": [],
+  "Executable": "build/bin/GBSD.DiscoveryBoard.elf",
+  "ToolchainSettings": {
+    "AvalonStudio.Toolchains.GCC.GccToolchainSettings": {
+      "CompileSettings": {
+        "Defines": [],
+        "Includes": [],
+        "DebugInformation": true,
+        "Rtti": true,
+        "Exceptions": false,
+        "CustomFlags": "-target arm-none-eabi -mcpu=cortex-m4 -mthumb -Wno-parentheses-equality -Wno-ignored-attributes -Wno-deprecated-register -Wno-unknown-pragmas -Wno-implicit-exception-spec-mismatch -Wno-varargs",
+        "CLanguageStandard": "Default",
+        "CppLanguageStandard": "Cpp14",
+        "Optimization": "Speed",
+        "Fpu": "Hard"
+      },
+      "LinkSettings": {
+        "LinkedLibraries": [],
+        "LinkerScripts": [
+          "linkscript.ld"
+        ],
+        "SystemLibraries": [],
+        "UseMemoryLayout": false,
+        "DiscardUnusedSections": true,
+        "NotUseStandardStartupFiles": true,
+        "Library": "NanoCLib",
+        "SelectedDeviceId": 0,
+        "InRom1Start": 134283264,
+        "InRom1Size": 262143,
+        "InRom2Start": 0,
+        "InRom2Size": 0,
+        "InRam1Start": 536870912,
+        "InRam1Size": 262144,
+        "InRam2Start": 0,
+        "InRam2Size": 0,
+        "DebugInRam": false,
+        "MiscLinkerArguments": "-mcpu=cortex-m4 -mthumb -u _printf_float  -Wl,-Map,$(TargetDir)output.map"
+      }
+    },
+    "AvalonStudio.Debugging.GDB.JLink.JLinkSettings": {
+      "Interface": "SWD",
+      "TargetDevice": "STM32F412ZE",
+      "DeviceKey": "STM32F412ZE",
+      "SpeedkHz": 4000
+    }
+  },
+  "DebugSettings": {
+    "JLinkSettings": {
+      "Interface": "SWD",
+      "TargetDevice": "STM32F410RB",
+      "DeviceKey": "STM32F410RB",
+      "SpeedkHz": 4000
+    },
+    "AvalonStudio.Debugging.GDB.JLink.JLinkSettings": {
+      "Interface": "SWD",
+      "TargetDevice": "STM32F407VG",
+      "DeviceKey": "STM32F407VG",
+      "SpeedkHz": 12000,
+      "Download": true,
+      "Reset": true
+    },
+    "AvalonStudio.Debugging.GDB.Remote.RemoteGdbSettings": {}
+  },
+  "Settings": {
+    "AvalonStudio.Projects.CPlusPlus.BuildEventsSettings": {
+      "PreBuildCommands": "",
+      "PostBuildCommands": "$(DevEnvDir)/arm-none-eabi-objcopy -O binary $(TargetPath) $(TargetDir)$(TargetName).bin\r\ndotnet Tools/BinEncrypt.dll BE7E2A1  $(TargetDir)$(TargetName).bin $(TargetDir)$(TargetName).firmware"
+    }
+  }
+}
