@@ -1,0 +1,11 @@
+{
+  "References": [],
+  "ExcludedFiles": [],
+  "Type": "StaticLibrary",
+  "StaticLibraries": [],
+  "ToolchainSettings": {},
+  "DebugSettings": {},
+  "Settings": {
+    "AvalonStudio.Projects.CPlusPlus.CodeAnalysisSettings": {}
+  }
+}
